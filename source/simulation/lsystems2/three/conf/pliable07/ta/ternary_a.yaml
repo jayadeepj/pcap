@@ -1,0 +1,103 @@
+# Define the lsystem rules for the tree
+# Prusinkiewicz, P., & Lindenmayer, A. (2012). The algorithmic beauty of plants. . Page 60, Table 2.3.
+
+tree:
+  geometry:
+    lsystem:
+
+      # L-System Configuration
+      # modifiable parameters.
+      params:
+        - operand: F
+          ident: l
+
+        - operand: N   # use N instead of !
+          ident: w
+
+      # the parameters that doesn't get modified
+      free_params:
+        - d1: 94.74 # divergence angle 1
+        - d2: 132.63 # divergence angle 2
+        - a: 18.95 # branching angle
+        - lr: 1.109 # elongation rate
+        - vr: 1.732 # width decrease rate
+
+
+      # For multi params for the same operand, the order follows the params attribute above
+      axiom: N(1)F(200)/(45)A
+
+      # Number of generations to iterate
+      n: 6
+
+      T: [ 0,0,-1. ] # tropism vector
+      e: 0.22 # axis bending susceptibility
+
+      theta: 30 # initial orientation
+      sigma: 11.25 # standard deviation of rotation for stochasticity
+
+      # List of rules
+      # Use N instead of ! symbol, ** instead of ^ for pow functions
+      rules:
+        - # Rule 1
+          cond:
+          pred: A
+          succ: N(vr)F(50)[&(a)F(50)A]/(d1)[&(a)F(50)A$]/(d2)[&(a)F(50)A$]
+        - # Rule 2
+          cond: 0 == 0 # defaults to true
+          pred: F(l)
+          succ: F(l*lr)
+        - # Rule 3
+          cond: 0 == 0 # defaults to true
+          pred: N(w)
+          succ: N(w*vr)
+
+      # randomise lsystem params for Domain Randomisation
+      randomise: True
+      # no of out files to create in case of randomisation. Index 0 will use the params as is. Ideally 2^n
+      randomise_cnt: 1600
+
+
+
+      # 0: 0_00
+      # 0.01  : _0_01
+      # 0.1 : _0_10
+      # 1: : _1_00
+      rel_std: 0.08
+
+
+    real:
+      # the text book length/radius is too high for a real tree
+      # Using gym.set_actor_scale instead has limitations running on gpu, on collision properties e.t.c so use this.
+      len_scale_factor: 0.0045
+      rad_scale_factor: 0.0050
+
+      physics:
+        density: 500              # typical wood physical density in kg per m^3
+
+    post:
+      # make all descendants of dof_root revolute. alternate to manually replacing fixed joints with revolute.
+      # leave empty '' for all branches to be fixed.
+      # or use 'auto' to randomly choose a valid dof root with children < 255
+      # or use a specific link name e.g. 'link-branch-B243L1P0' that can be found only post construction and simulation.
+      dof_root: 'auto'
+      flex_root: 'auto'
+
+      # use 2 dim or 3 dim dummy links for ball joints. I.e. use twists or not ?
+      # Note: if using 3, there may be malloc error. You have to reduce the overall number of collision links
+      spherical_dim: 2
+
+    fruits:
+      include: false
+      fruit_branches: [] # leave empty to use random branches for placing fruits.
+      fruits_cnt: 3
+
+    leaves:
+      include: false
+
+
+
+  # r_idx is the place-holder for the dr index.
+  # use raw or raw_test only after the ternary class, else rotation calculator will not work
+  # raw for train and raw_test for test
+  outfile: 'tree/gen/pliable07/ta/raw/ta_{r_idx}/ternary_a.urdf'
+

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<robot name="robot_without_friction">
+  <link name="base_link">
+    <visual>
+     <origin xyz="0 0 1.0"/>
+      <geometry>
+        <cylinder length="2.0" radius="0.2"/>
+      </geometry>
+      <material name="orange">
+      <color rgba="0.1 0.2 0.2 1"/>
+    </material>
+    </visual>
+
+    <collision>
+     <origin xyz="0 0 1.0"/>
+      <geometry>
+        <cylinder length="2.0" radius="0.2"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <joint name="base_to_branch1" type="revolute">
+    <parent link="base_link"/>
+    <child link="branch1"/>
+   <!-- y=parent branch(N-1) radius/2 , z = 3/4th height  -->
+    <origin xyz="0 0.1 1.5" rpy="-0.79 0 0"/>
+    <axis xyz="-1 0 0" />
+    <limit lower="0" upper="0.79"/>
+     <!-- <dynamics damping="50.265" friction="50.265"/> -->
+  </joint>
+
+
+  <link name="branch1">
+    <visual>
+      <geometry>
+        <cylinder length="2.0" radius="0.1"/>
+      </geometry>
+
+      <!-- the visual origin is w.r.t to link origin (written in joint )
+      z = length of this link
+      -->
+      <origin xyz="0 0 1.0" rpy="0 0 0"/>
+      <material name="blue">
+        <color rgba="0.1 1 0.2 0.8"/>
+    </material>
+    </visual>
+
+     <collision>
+      <origin xyz="0 0 1.0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="2.0" radius="0.1"/>
+      </geometry>
+    </collision>
+
+   <inertial>
+     <origin xyz="0 0 1.0" rpy="0 0 0"/>
+     <mass value="25.133"/>
+     <inertia ixx="8.44" ixy="0" ixz="0" iyy="8.44" iyz="0" izz="0.126" />
+   </inertial>
+  </link>
+
+
+</robot>
+
+
+<!--
+
+pi/4 : 0.79
+pi/2 : 1.57
+pi : 3.14
+3pi/4 : 2.36
+
+-->

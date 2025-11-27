@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!-- This ball joint has 2 dummy links, so it can move only in 3D (twist motion included) -->
+<robot name="">
+
+    <spherical_joint_set name="spherical_joint">
+        <!-- Second rotation (around Y-axis) -->
+        <joint name="sp-x-joint" type="revolute">
+            <parent link="link-branch-XXXX"/>
+            <child link="sp-x-dummy-link"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+            <axis xyz="0 1 0"/>
+            <limit lower="-1.5708" upper="1.5708" effort="5" velocity="2.1750"/>
+            <dynamics damping="100" friction="0.01"/>
+        </joint>
+        <link name="sp-x-dummy-link">
+            <visual>
+                <geometry>
+                    <cylinder length="0.01" radius="0.005"/>
+                </geometry>
+                <origin xyz="0 0 0.005" rpy="0 0 0"/>
+                <material name="material_name">
+                    <color rgba="0 0 0 1"/>
+                </material>
+            </visual>
+
+            <collision>
+                <geometry>
+                    <cylinder length="0.01" radius="0.005"/>
+                </geometry>
+                <origin xyz="0 0 0.005" rpy="0 0 0"/>
+            </collision>
+            <!-- Skip inertia, instead use the override inertia tag and density in Isaac Gym -->
+        </link>
+
+        <!-- Second rotation (around X-axis) -->
+        <joint name="sp-y-joint" type="revolute">
+            <parent link="sp-x-dummy-link"/>
+            <child link="sp-y-dummy-link"/>
+            <origin xyz="0. 0. 0.01" rpy="0 0 0"/>
+            <axis xyz="1 0 0"/>
+            <limit lower="-1.5708" upper="1.5708" effort="5" velocity="2.1750"/>
+            <dynamics damping="100" friction="0.01"/>
+        </joint>
+
+        <link name="sp-y-dummy-link">
+            <visual>
+                <geometry>
+                    <cylinder length="0.01" radius="0.005"/>
+                </geometry>
+
+                <origin xyz="0 0 0.005" rpy="0 0 0"/>
+                <material name="red">
+                    <color rgba="1 0 0 1"/>
+                </material>
+            </visual>
+            <collision>
+                <geometry>
+                    <cylinder length="0.01" radius="0.005"/>
+                </geometry>
+                <origin xyz="0 0 0.005" rpy="0 0 0"/>
+            </collision>
+            <!-- Skip inertia, instead use the override inertia tag and density in Isaac Gym -->
+        </link>
+
+        <!-- Third rotation (around Z-axis - twist) -->
+        <joint name="sp-z-joint" type="revolute">
+            <parent link="sp-y-dummy-link"/>
+            <child link="link-branch-XXXX"/>
+            <origin xyz="0. 0. 0.01" rpy="0 0 0"/>
+            <axis xyz="0 0 1"/>
+            <limit lower="-1.5708" upper="1.5708" effort="5" velocity="2.1750"/>
+            <dynamics damping="100" friction="0.01"/>
+        </joint>
+    </spherical_joint_set>
+
+</robot>
+

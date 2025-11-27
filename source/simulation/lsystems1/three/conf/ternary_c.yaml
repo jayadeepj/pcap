@@ -1,0 +1,63 @@
+# Define the lsystem rules for the tree
+# Prusinkiewicz, P., & Lindenmayer, A. (2012). The algorithmic beauty of plants. . Page 60, Table 2.3.
+
+tree:
+  geometry:
+    lsystem:
+
+      # L-System Configuration
+      # modifiable parameters.
+      params:
+        - operand: F
+          ident: l
+
+        - operand: N   # use N instead of !
+          ident: w
+
+      # the parameters that doesn't get modified
+      free_params:
+        - d1: 112.50 # divergence angle 1
+        - d2: 157.5 # divergence angle 2
+        - a: 22.50 # branching angle
+        - lr: 1.15 # elongation rate
+        - vr: 1.45 # width decrease rate
+
+      # For multi params for the same operand, the order follows the params attribute above.
+      axiom: N(1)F(200)/(45)A
+
+      # Number of generations to iterate
+      n: 8
+
+      T: [ -0.0,0,-1. ] # tropism vector
+      e: 0.27 # axis bending susceptibility
+
+      theta: 30 # initial orientation
+      sigma: 1. # standard deviation of rotation for stochasticity
+
+      # List of rules
+      # Use N instead of ! symbol, ** instead of ^ for pow functions
+      rules:
+        - # Rule 1
+          cond:        # no conditions since there are no identifiers
+          pred: A
+          succ: N(vr)F(50)[&(a)F(50)A]/(d1)[&(a)F(50)A$]/(d2)[&(a)F(50)A$]
+        - # Rule 2
+          cond: 0 == 0 # defaults to true, equivalent to *
+          pred: F(l)
+          succ: F(l*lr)
+        - # Rule 3
+          cond: 0 == 0 # defaults to true , equivalent to *
+          pred: N(w)
+          succ: N(w*vr)
+
+    real:
+      # the text book length/radius is too high for a real tree
+      # Using gym.set_actor_scale instead has limitations running on gpu, om collision properties e.t.c so use this.
+      len_scale_factor: 1.0
+      rad_scale_factor: 1.0
+      physics:
+        density: 500              # typical wood physical density in kg per m^3
+
+
+  outfile: 'tree/gen/tc/ternary_c.urdf'
+

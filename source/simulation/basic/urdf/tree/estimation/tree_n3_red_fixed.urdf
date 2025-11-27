@@ -1,0 +1,2144 @@
+<robot name="">
+    <link name="world"/>
+    <!-- Joint & Link: trunk-B0L0 Branch Id:0 Level: 0, Child idx:0 )-->
+    <joint name="joint-world-trunk-B0L0" type="fixed">
+        <parent link="world"/>
+        <child link="link-trunk-B0L0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+    <link name="link-trunk-B0L0">
+        <visual>
+            <geometry>
+                <cylinder length="1.5" radius="0.08"/>
+            </geometry>
+            <origin xyz="0 0 0.75" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="1.5" radius="0.08"/>
+            </geometry>
+            <origin xyz="0 0 0.75" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="1.507964"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+            <origin xyz="0 0 0.75" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B1L1P0 Branch Id:1 Level: 1, Child idx:0 )-->
+    <joint name="joint-trunk-B0L0-to-branch-B1L1P0" type="fixed">
+        <parent link="link-trunk-B0L0"/>
+        <child link="link-branch-B1L1P0"/>
+        <origin xyz="0 0 1.49" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-0.174" upper="0.174"/>
+        <dynamics damping="2.124" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B1L1P0">
+        <visual>
+            <geometry>
+                <cylinder length="0.95" radius="0.057"/>
+            </geometry>
+            <origin xyz="0 0 0.475" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.95" radius="0.057"/>
+            </geometry>
+            <origin xyz="0 0 0.475" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.484834"/>
+            <inertia ixx="0.037" ixy="0" ixz="0" iyy="0.037" iyz="0" izz="0.001"/>
+            <origin xyz="0 0 0.475" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B23L1P0 Branch Id:23 Level: 1, Child idx:1 )-->
+    <joint name="joint-trunk-B0L0-to-branch-B23L1P0" type="fixed">
+        <parent link="link-trunk-B0L0"/>
+        <child link="link-branch-B23L1P0"/>
+        <origin xyz="0 0 1.49" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-0.174" upper="0.174"/>
+        <dynamics damping="2.124" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B23L1P0">
+        <visual>
+            <geometry>
+                <cylinder length="0.95" radius="0.057"/>
+            </geometry>
+            <origin xyz="0 0 0.475" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.95" radius="0.057"/>
+            </geometry>
+            <origin xyz="0 0 0.475" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.484834"/>
+            <inertia ixx="0.037" ixy="0" ixz="0" iyy="0.037" iyz="0" izz="0.001"/>
+            <origin xyz="0 0 0.475" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B45L1P0 Branch Id:45 Level: 1, Child idx:2 )-->
+    <joint name="joint-trunk-B0L0-to-branch-B45L1P0" type="revolute">
+        <parent link="link-trunk-B0L0"/>
+        <child link="link-branch-B45L1P0"/>
+        <origin xyz="0 0 1.49" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-0.174" upper="0.174"/>
+        <dynamics damping="2.124" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B45L1P0">
+        <visual>
+            <geometry>
+                <cylinder length="0.95" radius="0.057"/>
+            </geometry>
+            <origin xyz="0 0 0.475" rpy="0 0 0"/>
+            <material name="red">
+                <color rgba="1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.95" radius="0.057"/>
+            </geometry>
+            <origin xyz="0 0 0.475" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.484834"/>
+            <inertia ixx="0.037" ixy="0" ixz="0" iyy="0.037" iyz="0" izz="0.001"/>
+            <origin xyz="0 0 0.475" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B2L2P1 Branch Id:2 Level: 2, Child idx:0 )-->
+    <joint name="joint-branch-B1L1P0-to-branch-B2L2P1" type="fixed">
+        <parent link="link-branch-B1L1P0"/>
+        <child link="link-branch-B2L2P1"/>
+        <origin xyz="0 0 0.94" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-0.3" upper="0.3"/>
+        <dynamics damping="0.546" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B2L2P1">
+        <visual>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.226697"/>
+            <inertia ixx="0.015" ixy="0" ixz="0" iyy="0.015" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B9L2P1 Branch Id:9 Level: 2, Child idx:1 )-->
+    <joint name="joint-branch-B1L1P0-to-branch-B9L2P1" type="fixed">
+        <parent link="link-branch-B1L1P0"/>
+        <child link="link-branch-B9L2P1"/>
+        <origin xyz="0 0 0.94" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-0.3" upper="0.3"/>
+        <dynamics damping="0.546" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B9L2P1">
+        <visual>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.226697"/>
+            <inertia ixx="0.015" ixy="0" ixz="0" iyy="0.015" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B16L2P1 Branch Id:16 Level: 2, Child idx:2 )-->
+    <joint name="joint-branch-B1L1P0-to-branch-B16L2P1" type="fixed">
+        <parent link="link-branch-B1L1P0"/>
+        <child link="link-branch-B16L2P1"/>
+        <origin xyz="0 0 0.94" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-0.3" upper="0.3"/>
+        <dynamics damping="0.546" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B16L2P1">
+        <visual>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.226697"/>
+            <inertia ixx="0.015" ixy="0" ixz="0" iyy="0.015" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B24L2P23 Branch Id:24 Level: 2, Child idx:0 )-->
+    <joint name="joint-branch-B23L1P0-to-branch-B24L2P23" type="fixed">
+        <parent link="link-branch-B23L1P0"/>
+        <child link="link-branch-B24L2P23"/>
+        <origin xyz="0 0 0.94" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-0.3" upper="0.3"/>
+        <dynamics damping="0.546" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B24L2P23">
+        <visual>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.226697"/>
+            <inertia ixx="0.015" ixy="0" ixz="0" iyy="0.015" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B31L2P23 Branch Id:31 Level: 2, Child idx:1 )-->
+    <joint name="joint-branch-B23L1P0-to-branch-B31L2P23" type="fixed">
+        <parent link="link-branch-B23L1P0"/>
+        <child link="link-branch-B31L2P23"/>
+        <origin xyz="0 0 0.94" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-0.3" upper="0.3"/>
+        <dynamics damping="0.546" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B31L2P23">
+        <visual>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.226697"/>
+            <inertia ixx="0.015" ixy="0" ixz="0" iyy="0.015" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B38L2P23 Branch Id:38 Level: 2, Child idx:2 )-->
+    <joint name="joint-branch-B23L1P0-to-branch-B38L2P23" type="fixed">
+        <parent link="link-branch-B23L1P0"/>
+        <child link="link-branch-B38L2P23"/>
+        <origin xyz="0 0 0.94" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-0.3" upper="0.3"/>
+        <dynamics damping="0.546" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B38L2P23">
+        <visual>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.226697"/>
+            <inertia ixx="0.015" ixy="0" ixz="0" iyy="0.015" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B46L2P45 Branch Id:46 Level: 2, Child idx:0 )-->
+    <joint name="joint-branch-B45L1P0-to-branch-B46L2P45" type="fixed">
+        <parent link="link-branch-B45L1P0"/>
+        <child link="link-branch-B46L2P45"/>
+        <origin xyz="0 0 0.94" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-0.3" upper="0.3"/>
+        <dynamics damping="0.546" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B46L2P45">
+        <visual>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.226697"/>
+            <inertia ixx="0.015" ixy="0" ixz="0" iyy="0.015" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B53L2P45 Branch Id:53 Level: 2, Child idx:1 )-->
+    <joint name="joint-branch-B45L1P0-to-branch-B53L2P45" type="fixed">
+        <parent link="link-branch-B45L1P0"/>
+        <child link="link-branch-B53L2P45"/>
+        <origin xyz="0 0 0.94" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-0.3" upper="0.3"/>
+        <dynamics damping="0.546" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B53L2P45">
+        <visual>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.226697"/>
+            <inertia ixx="0.015" ixy="0" ixz="0" iyy="0.015" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B60L2P45 Branch Id:60 Level: 2, Child idx:2 )-->
+    <joint name="joint-branch-B45L1P0-to-branch-B60L2P45" type="revolute">
+        <parent link="link-branch-B45L1P0"/>
+        <child link="link-branch-B60L2P45"/>
+        <origin xyz="0 0 0.94" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-0.3" upper="0.3"/>
+        <dynamics damping="0.546" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B60L2P45">
+        <visual>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+            <material name="red">
+                <color rgba="1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.902" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.226697"/>
+            <inertia ixx="0.015" ixy="0" ixz="0" iyy="0.015" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.451" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B3L3P2 Branch Id:3 Level: 3, Child idx:0 )-->
+    <joint name="joint-branch-B2L2P1-to-branch-B3L3P2" type="fixed">
+        <parent link="link-branch-B2L2P1"/>
+        <child link="link-branch-B3L3P2"/>
+        <origin xyz="0 0 0.892" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B3L3P2">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B5L3P2 Branch Id:5 Level: 3, Child idx:1 )-->
+    <joint name="joint-branch-B2L2P1-to-branch-B5L3P2" type="fixed">
+        <parent link="link-branch-B2L2P1"/>
+        <child link="link-branch-B5L3P2"/>
+        <origin xyz="0 0 0.892" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B5L3P2">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B7L3P2 Branch Id:7 Level: 3, Child idx:2 )-->
+    <joint name="joint-branch-B2L2P1-to-branch-B7L3P2" type="fixed">
+        <parent link="link-branch-B2L2P1"/>
+        <child link="link-branch-B7L3P2"/>
+        <origin xyz="0 0 0.892" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B7L3P2">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B10L3P9 Branch Id:10 Level: 3, Child idx:0 )-->
+    <joint name="joint-branch-B9L2P1-to-branch-B10L3P9" type="fixed">
+        <parent link="link-branch-B9L2P1"/>
+        <child link="link-branch-B10L3P9"/>
+        <origin xyz="0 0 0.892" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B10L3P9">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B12L3P9 Branch Id:12 Level: 3, Child idx:1 )-->
+    <joint name="joint-branch-B9L2P1-to-branch-B12L3P9" type="fixed">
+        <parent link="link-branch-B9L2P1"/>
+        <child link="link-branch-B12L3P9"/>
+        <origin xyz="0 0 0.892" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B12L3P9">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B14L3P9 Branch Id:14 Level: 3, Child idx:2 )-->
+    <joint name="joint-branch-B9L2P1-to-branch-B14L3P9" type="fixed">
+        <parent link="link-branch-B9L2P1"/>
+        <child link="link-branch-B14L3P9"/>
+        <origin xyz="0 0 0.892" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B14L3P9">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B17L3P16 Branch Id:17 Level: 3, Child idx:0 )-->
+    <joint name="joint-branch-B16L2P1-to-branch-B17L3P16" type="fixed">
+        <parent link="link-branch-B16L2P1"/>
+        <child link="link-branch-B17L3P16"/>
+        <origin xyz="0 0 0.892" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B17L3P16">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B19L3P16 Branch Id:19 Level: 3, Child idx:1 )-->
+    <joint name="joint-branch-B16L2P1-to-branch-B19L3P16" type="fixed">
+        <parent link="link-branch-B16L2P1"/>
+        <child link="link-branch-B19L3P16"/>
+        <origin xyz="0 0 0.892" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B19L3P16">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B21L3P16 Branch Id:21 Level: 3, Child idx:2 )-->
+    <joint name="joint-branch-B16L2P1-to-branch-B21L3P16" type="fixed">
+        <parent link="link-branch-B16L2P1"/>
+        <child link="link-branch-B21L3P16"/>
+        <origin xyz="0 0 0.892" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B21L3P16">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B25L3P24 Branch Id:25 Level: 3, Child idx:0 )-->
+    <joint name="joint-branch-B24L2P23-to-branch-B25L3P24" type="fixed">
+        <parent link="link-branch-B24L2P23"/>
+        <child link="link-branch-B25L3P24"/>
+        <origin xyz="0 0 0.892" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B25L3P24">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B27L3P24 Branch Id:27 Level: 3, Child idx:1 )-->
+    <joint name="joint-branch-B24L2P23-to-branch-B27L3P24" type="fixed">
+        <parent link="link-branch-B24L2P23"/>
+        <child link="link-branch-B27L3P24"/>
+        <origin xyz="0 0 0.892" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B27L3P24">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B29L3P24 Branch Id:29 Level: 3, Child idx:2 )-->
+    <joint name="joint-branch-B24L2P23-to-branch-B29L3P24" type="fixed">
+        <parent link="link-branch-B24L2P23"/>
+        <child link="link-branch-B29L3P24"/>
+        <origin xyz="0 0 0.892" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B29L3P24">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B32L3P31 Branch Id:32 Level: 3, Child idx:0 )-->
+    <joint name="joint-branch-B31L2P23-to-branch-B32L3P31" type="fixed">
+        <parent link="link-branch-B31L2P23"/>
+        <child link="link-branch-B32L3P31"/>
+        <origin xyz="0 0 0.892" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B32L3P31">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B34L3P31 Branch Id:34 Level: 3, Child idx:1 )-->
+    <joint name="joint-branch-B31L2P23-to-branch-B34L3P31" type="fixed">
+        <parent link="link-branch-B31L2P23"/>
+        <child link="link-branch-B34L3P31"/>
+        <origin xyz="0 0 0.892" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B34L3P31">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B36L3P31 Branch Id:36 Level: 3, Child idx:2 )-->
+    <joint name="joint-branch-B31L2P23-to-branch-B36L3P31" type="fixed">
+        <parent link="link-branch-B31L2P23"/>
+        <child link="link-branch-B36L3P31"/>
+        <origin xyz="0 0 0.892" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B36L3P31">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B39L3P38 Branch Id:39 Level: 3, Child idx:0 )-->
+    <joint name="joint-branch-B38L2P23-to-branch-B39L3P38" type="fixed">
+        <parent link="link-branch-B38L2P23"/>
+        <child link="link-branch-B39L3P38"/>
+        <origin xyz="0 0 0.892" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B39L3P38">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B41L3P38 Branch Id:41 Level: 3, Child idx:1 )-->
+    <joint name="joint-branch-B38L2P23-to-branch-B41L3P38" type="fixed">
+        <parent link="link-branch-B38L2P23"/>
+        <child link="link-branch-B41L3P38"/>
+        <origin xyz="0 0 0.892" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B41L3P38">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B43L3P38 Branch Id:43 Level: 3, Child idx:2 )-->
+    <joint name="joint-branch-B38L2P23-to-branch-B43L3P38" type="fixed">
+        <parent link="link-branch-B38L2P23"/>
+        <child link="link-branch-B43L3P38"/>
+        <origin xyz="0 0 0.892" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B43L3P38">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B47L3P46 Branch Id:47 Level: 3, Child idx:0 )-->
+    <joint name="joint-branch-B46L2P45-to-branch-B47L3P46" type="fixed">
+        <parent link="link-branch-B46L2P45"/>
+        <child link="link-branch-B47L3P46"/>
+        <origin xyz="0 0 0.892" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B47L3P46">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B49L3P46 Branch Id:49 Level: 3, Child idx:1 )-->
+    <joint name="joint-branch-B46L2P45-to-branch-B49L3P46" type="fixed">
+        <parent link="link-branch-B46L2P45"/>
+        <child link="link-branch-B49L3P46"/>
+        <origin xyz="0 0 0.892" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B49L3P46">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B51L3P46 Branch Id:51 Level: 3, Child idx:2 )-->
+    <joint name="joint-branch-B46L2P45-to-branch-B51L3P46" type="fixed">
+        <parent link="link-branch-B46L2P45"/>
+        <child link="link-branch-B51L3P46"/>
+        <origin xyz="0 0 0.892" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B51L3P46">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B54L3P53 Branch Id:54 Level: 3, Child idx:0 )-->
+    <joint name="joint-branch-B53L2P45-to-branch-B54L3P53" type="fixed">
+        <parent link="link-branch-B53L2P45"/>
+        <child link="link-branch-B54L3P53"/>
+        <origin xyz="0 0 0.892" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B54L3P53">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B56L3P53 Branch Id:56 Level: 3, Child idx:1 )-->
+    <joint name="joint-branch-B53L2P45-to-branch-B56L3P53" type="fixed">
+        <parent link="link-branch-B53L2P45"/>
+        <child link="link-branch-B56L3P53"/>
+        <origin xyz="0 0 0.892" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B56L3P53">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B58L3P53 Branch Id:58 Level: 3, Child idx:2 )-->
+    <joint name="joint-branch-B53L2P45-to-branch-B58L3P53" type="fixed">
+        <parent link="link-branch-B53L2P45"/>
+        <child link="link-branch-B58L3P53"/>
+        <origin xyz="0 0 0.892" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B58L3P53">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B61L3P60 Branch Id:61 Level: 3, Child idx:0 )-->
+    <joint name="joint-branch-B60L2P45-to-branch-B61L3P60" type="fixed">
+        <parent link="link-branch-B60L2P45"/>
+        <child link="link-branch-B61L3P60"/>
+        <origin xyz="0 0 0.892" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B61L3P60">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B63L3P60 Branch Id:63 Level: 3, Child idx:1 )-->
+    <joint name="joint-branch-B60L2P45-to-branch-B63L3P60" type="fixed">
+        <parent link="link-branch-B60L2P45"/>
+        <child link="link-branch-B63L3P60"/>
+        <origin xyz="0 0 0.892" rpy="0.34 0.0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B63L3P60">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="brown">
+                <color rgba="0.1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B65L3P60 Branch Id:65 Level: 3, Child idx:2 )-->
+    <joint name="joint-branch-B60L2P45-to-branch-B65L3P60" type="revolute">
+        <parent link="link-branch-B60L2P45"/>
+        <child link="link-branch-B65L3P60"/>
+        <origin xyz="0 0 0.892" rpy="0.0 -0.34 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit lower="-1.047" upper="1.047"/>
+        <dynamics damping="0.107" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B65L3P60">
+        <visual>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+            <material name="red">
+                <color rgba="1 0.2 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.857" radius="0.028"/>
+            </geometry>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.10554"/>
+            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.006" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.428" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B4L4P3 Branch Id:4 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B3L3P2-to-branch-B4L4P3" type="fixed">
+        <parent link="link-branch-B3L3P2"/>
+        <child link="link-branch-B4L4P3"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B4L4P3">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B6L4P5 Branch Id:6 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B5L3P2-to-branch-B6L4P5" type="fixed">
+        <parent link="link-branch-B5L3P2"/>
+        <child link="link-branch-B6L4P5"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B6L4P5">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B8L4P7 Branch Id:8 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B7L3P2-to-branch-B8L4P7" type="fixed">
+        <parent link="link-branch-B7L3P2"/>
+        <child link="link-branch-B8L4P7"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B8L4P7">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B11L4P10 Branch Id:11 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B10L3P9-to-branch-B11L4P10" type="fixed">
+        <parent link="link-branch-B10L3P9"/>
+        <child link="link-branch-B11L4P10"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B11L4P10">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B13L4P12 Branch Id:13 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B12L3P9-to-branch-B13L4P12" type="fixed">
+        <parent link="link-branch-B12L3P9"/>
+        <child link="link-branch-B13L4P12"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B13L4P12">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B15L4P14 Branch Id:15 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B14L3P9-to-branch-B15L4P14" type="fixed">
+        <parent link="link-branch-B14L3P9"/>
+        <child link="link-branch-B15L4P14"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B15L4P14">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B18L4P17 Branch Id:18 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B17L3P16-to-branch-B18L4P17" type="fixed">
+        <parent link="link-branch-B17L3P16"/>
+        <child link="link-branch-B18L4P17"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B18L4P17">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B20L4P19 Branch Id:20 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B19L3P16-to-branch-B20L4P19" type="fixed">
+        <parent link="link-branch-B19L3P16"/>
+        <child link="link-branch-B20L4P19"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B20L4P19">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B22L4P21 Branch Id:22 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B21L3P16-to-branch-B22L4P21" type="fixed">
+        <parent link="link-branch-B21L3P16"/>
+        <child link="link-branch-B22L4P21"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B22L4P21">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B26L4P25 Branch Id:26 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B25L3P24-to-branch-B26L4P25" type="fixed">
+        <parent link="link-branch-B25L3P24"/>
+        <child link="link-branch-B26L4P25"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B26L4P25">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B28L4P27 Branch Id:28 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B27L3P24-to-branch-B28L4P27" type="fixed">
+        <parent link="link-branch-B27L3P24"/>
+        <child link="link-branch-B28L4P27"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B28L4P27">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B30L4P29 Branch Id:30 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B29L3P24-to-branch-B30L4P29" type="fixed">
+        <parent link="link-branch-B29L3P24"/>
+        <child link="link-branch-B30L4P29"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B30L4P29">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B33L4P32 Branch Id:33 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B32L3P31-to-branch-B33L4P32" type="fixed">
+        <parent link="link-branch-B32L3P31"/>
+        <child link="link-branch-B33L4P32"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B33L4P32">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B35L4P34 Branch Id:35 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B34L3P31-to-branch-B35L4P34" type="fixed">
+        <parent link="link-branch-B34L3P31"/>
+        <child link="link-branch-B35L4P34"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B35L4P34">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B37L4P36 Branch Id:37 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B36L3P31-to-branch-B37L4P36" type="fixed">
+        <parent link="link-branch-B36L3P31"/>
+        <child link="link-branch-B37L4P36"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B37L4P36">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B40L4P39 Branch Id:40 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B39L3P38-to-branch-B40L4P39" type="fixed">
+        <parent link="link-branch-B39L3P38"/>
+        <child link="link-branch-B40L4P39"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B40L4P39">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B42L4P41 Branch Id:42 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B41L3P38-to-branch-B42L4P41" type="fixed">
+        <parent link="link-branch-B41L3P38"/>
+        <child link="link-branch-B42L4P41"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B42L4P41">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B44L4P43 Branch Id:44 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B43L3P38-to-branch-B44L4P43" type="fixed">
+        <parent link="link-branch-B43L3P38"/>
+        <child link="link-branch-B44L4P43"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B44L4P43">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B48L4P47 Branch Id:48 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B47L3P46-to-branch-B48L4P47" type="fixed">
+        <parent link="link-branch-B47L3P46"/>
+        <child link="link-branch-B48L4P47"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B48L4P47">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B50L4P49 Branch Id:50 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B49L3P46-to-branch-B50L4P49" type="fixed">
+        <parent link="link-branch-B49L3P46"/>
+        <child link="link-branch-B50L4P49"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B50L4P49">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B52L4P51 Branch Id:52 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B51L3P46-to-branch-B52L4P51" type="fixed">
+        <parent link="link-branch-B51L3P46"/>
+        <child link="link-branch-B52L4P51"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B52L4P51">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B55L4P54 Branch Id:55 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B54L3P53-to-branch-B55L4P54" type="fixed">
+        <parent link="link-branch-B54L3P53"/>
+        <child link="link-branch-B55L4P54"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B55L4P54">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B57L4P56 Branch Id:57 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B56L3P53-to-branch-B57L4P56" type="fixed">
+        <parent link="link-branch-B56L3P53"/>
+        <child link="link-branch-B57L4P56"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B57L4P56">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B59L4P58 Branch Id:59 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B58L3P53-to-branch-B59L4P58" type="fixed">
+        <parent link="link-branch-B58L3P53"/>
+        <child link="link-branch-B59L4P58"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B59L4P58">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B62L4P61 Branch Id:62 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B61L3P60-to-branch-B62L4P61" type="fixed">
+        <parent link="link-branch-B61L3P60"/>
+        <child link="link-branch-B62L4P61"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B62L4P61">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B64L4P63 Branch Id:64 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B63L3P60-to-branch-B64L4P63" type="fixed">
+        <parent link="link-branch-B63L3P60"/>
+        <child link="link-branch-B64L4P63"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B64L4P63">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!-- Joint & Link: branch-B66L4P65 Branch Id:66 Level: 4, Child idx:0 )-->
+    <joint name="joint-branch-B65L3P60-to-branch-B66L4P65" type="revolute">
+        <parent link="link-branch-B65L3P60"/>
+        <child link="link-branch-B66L4P65"/>
+        <origin xyz="0 0 0.847" rpy="-0.34 0.0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit lower="-1.57" upper="1.57"/>
+        <dynamics damping="0.001" friction="0.0"/>
+    </joint>
+    <link name="link-branch-B66L4P65">
+        <visual>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+            <material name="green">
+                <color rgba="0.1 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.016" radius="0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.001005"/>
+            <inertia ixx="0.0" ixy="0" ixz="0" iyy="0.0" iyz="0" izz="0.0"/>
+            <origin xyz="0 0 0.008" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <!--support_mass_ratio={"joint-trunk-B0L0-to-branch-B1L1P0": 2113.264,
+ "joint-trunk-B0L0-to-branch-B23L1P0": 2113.264,
+ "joint-trunk-B0L0-to-branch-B45L1P0": 2113.264,
+ "joint-branch-B1L1P0-to-branch-B2L2P1": 543.614,
+ "joint-branch-B1L1P0-to-branch-B9L2P1": 543.614,
+ "joint-branch-B1L1P0-to-branch-B16L2P1": 543.614,
+ "joint-branch-B23L1P0-to-branch-B24L2P23": 543.614,
+ "joint-branch-B23L1P0-to-branch-B31L2P23": 543.614,
+ "joint-branch-B23L1P0-to-branch-B38L2P23": 543.614,
+ "joint-branch-B45L1P0-to-branch-B46L2P45": 543.614,
+ "joint-branch-B45L1P0-to-branch-B53L2P45": 543.614,
+ "joint-branch-B45L1P0-to-branch-B60L2P45": 543.614,
+ "joint-branch-B2L2P1-to-branch-B3L3P2": 106.015,
+ "joint-branch-B2L2P1-to-branch-B5L3P2": 106.015,
+ "joint-branch-B2L2P1-to-branch-B7L3P2": 106.015,
+ "joint-branch-B9L2P1-to-branch-B10L3P9": 106.015,
+ "joint-branch-B9L2P1-to-branch-B12L3P9": 106.015,
+ "joint-branch-B9L2P1-to-branch-B14L3P9": 106.015,
+ "joint-branch-B16L2P1-to-branch-B17L3P16": 106.015,
+ "joint-branch-B16L2P1-to-branch-B19L3P16": 106.015,
+ "joint-branch-B16L2P1-to-branch-B21L3P16": 106.015,
+ "joint-branch-B24L2P23-to-branch-B25L3P24": 106.015,
+ "joint-branch-B24L2P23-to-branch-B27L3P24": 106.015,
+ "joint-branch-B24L2P23-to-branch-B29L3P24": 106.015,
+ "joint-branch-B31L2P23-to-branch-B32L3P31": 106.015,
+ "joint-branch-B31L2P23-to-branch-B34L3P31": 106.015,
+ "joint-branch-B31L2P23-to-branch-B36L3P31": 106.015,
+ "joint-branch-B38L2P23-to-branch-B39L3P38": 106.015,
+ "joint-branch-B38L2P23-to-branch-B41L3P38": 106.015,
+ "joint-branch-B38L2P23-to-branch-B43L3P38": 106.015,
+ "joint-branch-B46L2P45-to-branch-B47L3P46": 106.015,
+ "joint-branch-B46L2P45-to-branch-B49L3P46": 106.015,
+ "joint-branch-B46L2P45-to-branch-B51L3P46": 106.015,
+ "joint-branch-B53L2P45-to-branch-B54L3P53": 106.015,
+ "joint-branch-B53L2P45-to-branch-B56L3P53": 106.015,
+ "joint-branch-B53L2P45-to-branch-B58L3P53": 106.015,
+ "joint-branch-B60L2P45-to-branch-B61L3P60": 106.015,
+ "joint-branch-B60L2P45-to-branch-B63L3P60": 106.015,
+ "joint-branch-B60L2P45-to-branch-B65L3P60": 106.015,
+ "joint-branch-B3L3P2-to-branch-B4L4P3": 1.0,
+ "joint-branch-B5L3P2-to-branch-B6L4P5": 1.0,
+ "joint-branch-B7L3P2-to-branch-B8L4P7": 1.0,
+ "joint-branch-B10L3P9-to-branch-B11L4P10": 1.0,
+ "joint-branch-B12L3P9-to-branch-B13L4P12": 1.0,
+ "joint-branch-B14L3P9-to-branch-B15L4P14": 1.0,
+ "joint-branch-B17L3P16-to-branch-B18L4P17": 1.0,
+ "joint-branch-B19L3P16-to-branch-B20L4P19": 1.0,
+ "joint-branch-B21L3P16-to-branch-B22L4P21": 1.0,
+ "joint-branch-B25L3P24-to-branch-B26L4P25": 1.0,
+ "joint-branch-B27L3P24-to-branch-B28L4P27": 1.0,
+ "joint-branch-B29L3P24-to-branch-B30L4P29": 1.0,
+ "joint-branch-B32L3P31-to-branch-B33L4P32": 1.0,
+ "joint-branch-B34L3P31-to-branch-B35L4P34": 1.0,
+ "joint-branch-B36L3P31-to-branch-B37L4P36": 1.0,
+ "joint-branch-B39L3P38-to-branch-B40L4P39": 1.0,
+ "joint-branch-B41L3P38-to-branch-B42L4P41": 1.0,
+ "joint-branch-B43L3P38-to-branch-B44L4P43": 1.0,
+ "joint-branch-B47L3P46-to-branch-B48L4P47": 1.0,
+ "joint-branch-B49L3P46-to-branch-B50L4P49": 1.0,
+ "joint-branch-B51L3P46-to-branch-B52L4P51": 1.0,
+ "joint-branch-B54L3P53-to-branch-B55L4P54": 1.0,
+ "joint-branch-B56L3P53-to-branch-B57L4P56": 1.0,
+ "joint-branch-B58L3P53-to-branch-B59L4P58": 1.0,
+ "joint-branch-B61L3P60-to-branch-B62L4P61": 1.0,
+ "joint-branch-B63L3P60-to-branch-B64L4P63": 1.0,
+ "joint-branch-B65L3P60-to-branch-B66L4P65": 1.0}-->
+    <!--min_leaf_force=0.01105-->
+</robot>

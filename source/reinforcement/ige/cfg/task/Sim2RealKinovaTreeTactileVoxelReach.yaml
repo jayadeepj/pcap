@@ -1,0 +1,110 @@
+# used to create the object
+name: Sim2RealKinovaTreeTactileVoxelReach
+
+physics_engine: ${..physics_engine}
+
+# if given, will override the device setting in gym.
+# minimum 512 environments. use index 159 in sim, if you want to see the axes e.t.c
+env:
+  numEnvs: ${resolve_default:2048,${...num_envs}}
+  envSpacing: 1.5
+  episodeLength: 800
+
+
+  clipObservations: 5.0
+  clipActions: 1.0
+
+  startPositionNoise: 0.0
+  startRotationNoise: 0.0
+
+  numProps: 16
+  aggregateMode: 3
+
+
+  actionScale: 10. # originally 7.5, for sim2real with stagger, 10 seems appropriate.
+  dofVelocityScale: 0.1
+  distRewardScale: 2.0
+  rotRewardScale: 0.5
+  aroundHandleRewardScale: 0.25
+  openRewardScale: 7.5
+  fingerDistRewardScale: 5.0
+  actionPenaltyScale: 0.01
+  collisionRewardScale: 0.01
+
+  asset:
+    commonAssetRoot: "source/common/assets"
+    assetFileNameKinova: "urdf/kinova_description/urdf/j2n6s300.urdf"
+
+    # Tree Pattern regular Domain Randomised
+    trainLsystemAssetRoot: "source/simulation/lsystems1/three/urdf/tree/gen/randomised/train/"
+    testLsystemAssetRoot: "source/simulation/lsystems1/three/urdf/tree/gen/randomised/test/"
+    assetFileNameTree: "ta_{r_idx}/ternary_a.urdf"
+
+
+  # store joint torques for training the classifier.
+  storeTrgTorques: False
+  # Maximum amount torque records (frames/iterations) to save for training.
+  # Use < 0  or set storeTrgTorques False to skip storing.
+  maxTrgTorquesToStore: 1000
+
+  # set to True to include collision indicator to penalise the reward and the joint torques in state observations.
+  # if set to False true-points from the simulation are used instead.
+  enableJointTorqueObs: True
+  # set to > 0 to include collision indicator to penalise the reward and the joint torques in state observations.
+  # NO_PENALTY = 0,  BINARY_PENALTY = 1, DECAY_PENALTY = 2
+  collisionPenalty: 1
+
+  # use voxels from file as test targets. applicable only for inference
+  enableEvalVoxelFile: True
+
+  # If Normalised contact force in Newtons is below this, the arm can push through so ignore collision.
+  # currently the (1% - 99%) for net contact in Franka is -2000 to 2000
+  # currently the (1% - 99%) for net contact in Kinova is -800 to 800
+  # 3 newtons on all 16 links => A norm value of 20 . Hence, 3N=> 20, 4N=>27, 5N=34, 10=> 70 ~about x7
+  brushPastNormContactForce: 40
+
+  ### sim to real configs ###
+  # set True to use staggered actions for both training, test and real.
+  # False for all simulation measurements only.
+  transferableToReal: False
+
+  # Compute Kp,Kd of the Tree (not the robot) by beam deflection policy or just a rudimentary policy?
+  dynamicsByBeamDeflection: False
+
+  # randomise the start position and orientation
+  # this is mainly to check if addition of symmetry-awareness has an impact on accuracy.
+  randomiseRobotStartPose : False
+  enableSymmetryAwareness: False
+
+  # for test trees use rotation from file or use fixed ones instead.
+  # use True only for L-system ablations. Keep False for regular as the collision patterns depend on the rotation
+  testTreeUseFileRotation: False
+
+  enableDebugVis: False
+
+
+sim:
+  dt: 0.0166 # 1/60
+  #dt: 0.0083 # 1/120
+  substeps: 1
+  up_axis: "z"
+  use_gpu_pipeline: ${eq:${...pipeline},"gpu"}
+  gravity: [0.0, 0.0, -9.81]
+  physx:
+    num_threads: ${....num_threads}
+    solver_type: ${....solver_type}
+    use_gpu: ${contains:"cuda",${....sim_device}} # set to False to run on CPU
+    num_position_iterations: 12
+    num_velocity_iterations: 1
+    contact_offset: 0.005
+    rest_offset: 0.0
+    bounce_threshold_velocity: 0.2
+    max_depenetration_velocity: 1000.0
+    default_buffer_size_multiplier: 5.0
+    max_gpu_contact_pairs: 1048576 # 1024*1024
+    num_subscenes: ${....num_subscenes}
+    # [Jay]: updated for contact collection.
+    contact_collection: 1 # 0: CC_NEVER (don't collect contact info), 1: CC_LAST_SUBSTEP (collect only contacts on last substep), 2: CC_ALL_SUBSTEPS (broken - do not use!)
+
+task:
+  randomize: False

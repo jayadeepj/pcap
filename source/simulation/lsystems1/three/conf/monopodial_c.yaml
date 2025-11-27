@@ -1,0 +1,68 @@
+# Define the lsystem rules for the tree
+# Prusinkiewicz, P., & Lindenmayer, A. (2012). The algorithmic beauty of plants. Page 56, Table 2.1.
+
+tree:
+  geometry:
+    lsystem:
+
+      # L-System Configuration
+      # modifiable parameters.
+      params:
+        - operand: A
+          ident: l
+
+        - operand: A
+          ident: w
+
+        - operand: N   # use N instead of !
+          ident: w
+
+      # the parameters that doesn't get modified
+      free_params:
+        - r1: 0.9
+        - r2: 0.8
+        - a0: 45 # branching angle from the trunk
+        - a2: 45 # branching angle for the lateral axes
+        - d: 120 # divergence angle
+        - wr: 0.707 # width decrease rate
+        - l_min: 0.0
+
+      # For multi params for the same operand, the order follows the params attribute, so l=50.0, w=10.0
+      axiom: A(50.0,10.0)
+
+      # Number of generations to iterate
+      n: 11
+
+      T: [0,0,-0.5 ] # tropism vector
+      e: 0.40 # axis bending susceptibility
+
+      theta: 30 # initial orientation
+      sigma: 11.25 # standard deviation of rotation for stochasticity
+
+      # List of rules
+      # Use N instead of ! symbol, ** instead of ^ for pow functions
+      rules:
+        - # Rule 1
+          cond: l >= l_min # defaults to true
+          pred: A(l,w)
+          succ: N(w)F(l)[&(a0)B(l*r2,w*wr)]/(d)A(l*r1,w*wr)
+        - # Rule 2
+          cond: l >= l_min # defaults to true
+          pred: B(l,w)
+          succ: N(w)F(l)[+(-a2)$C(l*r2,w*wr)]C(l*r1,w*wr)
+        - # Rule 3
+          cond: l >= l_min # defaults to true
+          pred: C(l,w)
+          succ: N(w)F(l)[+(a2)$B(l*r2,w*wr)]B(l*r1,w*wr)
+
+
+    real:
+      # the text book length/radius is too high for a real tree
+      # Using gym.set_actor_scale instead has limitations running on gpu, om collision properties e.t.c so use this.
+      len_scale_factor: 1.0
+      rad_scale_factor: 1.0
+      physics:
+        density: 500              # typical wood physical density in kg per m^3
+
+
+  outfile: 'tree/gen/mc/monopodial_c.urdf'
