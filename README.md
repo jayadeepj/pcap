@@ -117,7 +117,6 @@ Modules that will end up being part of external builds. For e.g. part of kinova-
     cd "${kinova_ros_path}/../../"
     # in different terminals
     roslaunch kinova_bringup kinova_robot.launch kinova_robotType:=j2n6s300
-    rosrun spot_control gt_trajectory_tree_pos_control.py -v -r j2n6s300 0
    
    ```
 
